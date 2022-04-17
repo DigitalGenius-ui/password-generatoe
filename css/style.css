@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(3, 152, 251), rgb(159, 21, 227));
+}
+
+.container{
+    position: relative;
+    width: 35rem;
+}
+
+@media(max-width : 560px){
+    .container{
+        width: 95%;
+    }
+}
+
+.container h1{
+    color: white;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.container .password{
+    display: flex;
+    box-shadow: -10px 7px 80px 0.5px rgb(97, 97, 97);
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media(max-width : 560px){
+    .password{
+        flex-direction: column;
+    }
+}
+
+.container .counter{
+    margin-bottom: 1rem;
+    background-color: white;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+}
+
+.counter .right, .left{
+    cursor: pointer;
+    font-size: 0.7rem;
+    color: rgb(12, 121, 205);
+}
+
+.counter .number{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.696);
+}
+
+.password .input-part{
+    background-color: white;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 5px 0 0 5px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(max-width : 560px){
+    .password .input-part{
+        border-radius: 5px 5px 0px 0px ;
+    }
+}
+
+.input-part #input{
+    width: 95%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+}
+
+.copy{
+    cursor: pointer;
+    color: rgb(12, 121, 205);
+}
+
+.password .btn{
+    padding: 0.7rem;
+    border: none;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 0 5px 5px 0 ;
+}
+
+@media(max-width : 560px){
+    .password .btn{
+        border-radius: 0px 0px 5px 5px ;
+    }
+}
+
+.notification{
+    position: fixed;
+    bottom: 1rem;
+    background-color: white;
+    padding:  1rem;
+    border-radius: 5px;
+    border-left: 13px solid green;
+    overflow: hidden;
+    transform: translateY(5rem);
+    transition: 500ms ease-in-out;
+}
+
+.notification.active{
+    transform: translateY(0);
+}
+
+.notification p{
+    font-size: 0.7rem;
+}
+
+.notification .line{
+    width: 0;
+    height: 3px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

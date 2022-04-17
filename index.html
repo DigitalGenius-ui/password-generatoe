@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="./js/script.js" defer></script>
+    <title>Password generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Your Password</h1>
+        <div class="counter">
+            <span class="left"><i class="fa-solid fa-chevron-left"></i></span>
+            <div class="number">8</div>
+            <span class="right"><i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+        <div class="password">
+            <div class="input-part">
+                <input type="text" readonly id="input" 
+                placeholder="Generate...">
+                <span 
+                onclick="copyText()"
+                class="copy"><i class="fa-solid fa-clipboard"></i></span>
+            </div>
+            <button class="btn"
+            onclick="passwordGenerator()"
+            >Generate</button>
+        </div>
+        <div class="notification">
+            <p class="note"></p>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+</html>
