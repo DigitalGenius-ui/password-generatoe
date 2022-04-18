@@ -8,7 +8,7 @@ let passwordValue = 8;
 const passwordGenerator = () =>{
     let passwordLength = passwordValue;
     let password = "";
-    let signs = "1234567890?><:}{+_)(*&^%$#@!~?><";
+    let signs = "1234567890?><:}{+_)(*&^%$#@!~?><abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXIZ";
 
     for (let i = 0; i < passwordLength; i++) {
         password += signs.charAt(Math.floor(Math.random() * signs.length));
@@ -59,5 +59,5 @@ const lineCount = () => {
         if(value >= 200){
             clearInterval(lineWidth);
         }
-    }, 3);
+    }, 8);
 }
